@@ -76,7 +76,74 @@ article{
     font-family: 'Dancing Script', cursive;
 }
 
+.article2 fieldset {
+    width: 100%;
+    border: 5px solid #9D9D9D;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px gray;
+    padding: 10px 20px;
+}
 
+.article2 legend {
+    font-size: 2em;
+    font-family: Arial;
+    font-weight: 900;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.article2 .imgdiv {
+    width: 90%;
+    height: 525px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.article2 .imgdiv img {
+    width: 720px;
+    height: 525px;
+    position: absolute;
+    right: 0;
+}
+
+.article2 .imgdiv img:hover {
+    cursor: pointer;
+}
+
+.article2 .itemsdiv {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.article2 .itemsdiv .selectdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.article2 .itemsdiv .selectdiv img {
+    width: 10px;
+    margin: 10px;
+    transition: transform 0.2s;
+}
+
+.article2 .itemsdiv .selectdiv img:hover {
+    cursor: pointer;
+    transform: scale(1.5, 1.5);
+}
+
+.article2 .itemsdiv .updowndiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article2 .itemsdiv .updowndiv img {
+    width: 50px;
+}
+
+.article2 .itemsdiv .updowndiv img:hover {
+    cursor: pointer;
+}
 
 
 

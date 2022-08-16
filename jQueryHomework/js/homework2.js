@@ -1,0 +1,1 @@
+﻿$("#article2 #imgdiv").html('<img src="images/homework2/1.png">');

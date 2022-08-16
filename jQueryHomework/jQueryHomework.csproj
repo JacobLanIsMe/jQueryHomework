@@ -73,16 +73,16 @@
     <Content Include="images\dash.png" />
     <Content Include="images\dot.png" />
     <Content Include="images\headerback.jpg" />
-    <Content Include="images\homework4\1.jpg" />
-    <Content Include="images\homework4\10.jpg" />
-    <Content Include="images\homework4\2.jpg" />
-    <Content Include="images\homework4\3.jpg" />
-    <Content Include="images\homework4\4.jpg" />
-    <Content Include="images\homework4\5.jpg" />
-    <Content Include="images\homework4\6.jpg" />
-    <Content Include="images\homework4\7.jpg" />
-    <Content Include="images\homework4\8.jpg" />
-    <Content Include="images\homework4\9.jpg" />
+    <Content Include="images\homework2\1.jpg" />
+    <Content Include="images\homework2\10.jpg" />
+    <Content Include="images\homework2\2.jpg" />
+    <Content Include="images\homework2\3.jpg" />
+    <Content Include="images\homework2\4.jpg" />
+    <Content Include="images\homework2\5.jpg" />
+    <Content Include="images\homework2\6.jpg" />
+    <Content Include="images\homework2\7.jpg" />
+    <Content Include="images\homework2\8.jpg" />
+    <Content Include="images\homework2\9.jpg" />
     <Content Include="images\incorrect.png" />
     <Content Include="images\next.png" />
     <Content Include="images\pause.png" />
@@ -94,6 +94,7 @@
     <Content Include="images\top.png" />
     <Content Include="index.html" />
     <Content Include="js\homework1.js" />
+    <Content Include="js\homework2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
