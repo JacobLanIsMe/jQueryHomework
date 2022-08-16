@@ -1,0 +1,135 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #D0D0D0;
+    width: 100%;
+    color: black;
+    text-align: center;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+header .title {
+    margin-left: 20px;
+    font-size: 2em;
+    height: 80px;
+}
+
+header .title p {
+    line-height: 80px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+}
+
+header nav {
+    display: flex;
+    margin-left: 20px;
+    justify-content: center;
+}
+
+header a {
+    display: block;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 1.7em;
+    font-family: DFKai-SB;
+    text-align: center;
+    color: #5B5B00;
+    transition: transform 1s, text-shadow 1s;
+}
+
+header a:hover {
+    color: #424200;
+    transform: translate(-5px, -5px);
+    text-shadow: 5px 5px 5px gray;
+}
+
+hr{
+    margin:130px auto;
+}
+
+article{
+    width:80%;
+    margin:0 auto;
+}
+
+.articleTitle {
+    font-family: DFKai-SB;
+    font-size: 2em;
+    font-weight: bold;
+    color: #5B5B00;
+}
+
+.article1 .scorediv{
+    font-size:2em;
+    font-family:DFKai-SB;
+}
+
+.article1 .scorediv span {
+    font-family: 'Dancing Script', cursive;
+}
+
+
+
+
+
+.footer {
+    background-color: #D0D0D0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.footer > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerimgdiv, .aboutme {
+    margin: 0 20px;
+}
+
+.footer .aboutme .name {
+    font-size: 2em;
+    font-family: DFKai-SB;
+    color: black;
+}
+
+.footer .aboutme span {
+    font-family: 'Dancing Script', cursive;
+}
+
+.footer .aboutme .link {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer .aboutme a {
+    text-decoration: none;
+    font-size: 1.4em;
+    color: #8C8C00;
+    font-family: 'Dancing Script', cursive;
+    margin: 0 20px 0 0;
+    transition: font-size 1s;
+}
+
+.footer .aboutme a:hover {
+    font-size: 2em;
+    color: #424200;
+}
+
+.footer .footerimgdiv {
+    width: 120px;
+}
+
+.footer .footerimgdiv img {
+    width: 100%;
+    display: block;
+}
