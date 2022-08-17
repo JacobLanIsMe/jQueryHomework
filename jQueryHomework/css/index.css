@@ -87,6 +87,7 @@ article{
     border-radius: 20px;
     box-shadow: 5px 5px 15px gray;
     padding: 10px 20px;
+    
 }
 
 .article2 legend {
@@ -96,58 +97,70 @@ article{
     margin: auto;
     padding: 0 20px;
 }
-
-.article2 .imgdiv {
+.article2 .showimg{
     width: 90%;
     height: 525px;
     overflow: hidden;
     margin: 0 auto;
-    position: relative;
+    position:relative;
+}
+.article2 .imgdiv {
+    width: 100%;
+    position:absolute;
 }
 
-.article2 .imgdiv img {
-    width: 720px;
-    height: 525px;
-    position: absolute;
-    right: 0;
+.article2 .imgdiv>img {
+    width:100%;
 }
 
 .article2 .imgdiv img:hover {
     cursor: pointer;
 }
 
-.article2 .itemsdiv {
-    width: 60%;
-    margin: 0 auto;
-}
-
-.article2 .itemsdiv .selectdiv {
+.article2 .selectdiv {
     display: flex;
     justify-content: center;
+    position:absolute;
+    width:100%;
+    bottom:0;
 }
 
-.article2 .itemsdiv .selectdiv img {
-    width: 10px;
+.article2 .selectdiv li {
+    width: 15px;
+    height:5px;
+    background-color:transparent;
+    border:1px solid black;
     margin: 10px;
-    transition: transform 0.2s;
+    /*transition: transform 0.2s;*/
+    list-style:none;
 }
 
-.article2 .itemsdiv .selectdiv img:hover {
+/*.article2 .itemsdiv .selectdiv li:hover {
     cursor: pointer;
     transform: scale(1.5, 1.5);
-}
+}*/
 
-.article2 .itemsdiv .updowndiv {
-    display: flex;
-    justify-content: space-between;
-}
-
-.article2 .itemsdiv .updowndiv img {
+.article2 #previous,
+.article2 #next {
+    position: absolute;
     width: 50px;
+    bottom:0;
+    top:0;
+    margin:auto 0;
+    opacity:0.2;
 }
 
-.article2 .itemsdiv .updowndiv img:hover {
+.article2 #previous {
+    left: 0;
+}
+.article2 #next{
+    right:0;
+}
+
+.article2 #previous:hover,
+.article2 #next:hover {
     cursor: pointer;
+    opacity: 1;
 }
 
 
