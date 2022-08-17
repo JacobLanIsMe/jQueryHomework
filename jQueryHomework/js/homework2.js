@@ -1,8 +1,5 @@
-﻿////let startPlay = setInterval(PlayImage, 2000);
+﻿let globalTimer = setInterval(NextImage, 5000);
 $("#article2 #imgdiv").html("<img src='images/homework2/1.jpg' alt='alt'/>");
-//$("#article2 .imgbox1").html('<img src="images/homework2/1.jpg">');
-//$("#article2 .imgbox2").html('<img src="images/homework2/2.jpg">');
-//$("#article2 .imgbox3").html('<img src="images/homework2/3.jpg">');
 let str = "";
 for (let i = 1; i <= 10; i++) {
     str += "<li></li>";
@@ -13,11 +10,42 @@ for (let i = 0; i < 10; i++) {
     str += `<img src='images/homework2/${i}.jpg' alt='alt' style='left:${100*i}%;z-index:-1'/>`;
 }
 $("#article2 #imgdiv").html(str);
-$("#article2 li").first().css("background-color", "black");
-
+$("#article2 li").first().css({ "background-color": "black", "width": "20px" });
+let imgindex;
+let nowindex = 0;
+function ShowImage() {
+    let step = imgindex - nowindex;
+    $("#imgdiv img").animate({ left: `-=${100 * step}%` }, 500);
+    nowindex = imgindex;
+    $("#article2 li").eq(nowindex).css({ "background-color": "black", "width": "20px" }).siblings().css({ "background-color": "transparent", "width": "10px" });
+}
 
 $("#article2 li").mouseenter(function () {
-    $(this).css("background-color", "black").siblings().css("background-color", "transparent");
-    let imgindex = $(this).index();
-    $("#article2 #imgdiv").css("left", `${(0 - 100) * imgindex}%`);
+    imgindex = $(this).index();
+    ShowImage();
 });
+
+$("#next").click(function () {
+    NextImage();
+});
+
+function NextImage() {
+    imgindex = nowindex + 1;
+    if (imgindex == $("#article2 li").length) {
+        imgindex = 0;
+    };
+    ShowImage();
+}
+
+$("#previous").click(function () {
+    imgindex = nowindex - 1;
+    if (imgindex < 0) {
+        imgindex = $("#article2 li").length-1;
+    };
+    ShowImage();
+});
+
+//$("#imgdiv img").mouseenter(function () { clearInterval(globalTimer) }).mouseleave(function () { globalTimer = setInterval(NextImage, 5000); });
+
+$("#article2 .showimg").hover(function () { clearInterval(globalTimer); }, function () { globalTimer = setInterval(NextImage, 5000); });
+
