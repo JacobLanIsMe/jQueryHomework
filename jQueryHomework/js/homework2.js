@@ -1,4 +1,4 @@
-﻿let globalTimer = setInterval(NextImage, 5000);
+﻿let globalTimer = setInterval(NextImage, 3000);
 $("#article2 #imgdiv").html("<img src='images/homework2/1.jpg' alt='alt'/>");
 let str = "";
 for (let i = 1; i <= 10; i++) {
@@ -45,7 +45,5 @@ $("#previous").click(function () {
     ShowImage();
 });
 
-//$("#imgdiv img").mouseenter(function () { clearInterval(globalTimer) }).mouseleave(function () { globalTimer = setInterval(NextImage, 5000); });
-
-$("#article2 .showimg").hover(function () { clearInterval(globalTimer); }, function () { globalTimer = setInterval(NextImage, 5000); });
+$("#article2 .showimg").hover(function () { clearInterval(globalTimer); }, function () { globalTimer = setInterval(NextImage, 3000); });
 

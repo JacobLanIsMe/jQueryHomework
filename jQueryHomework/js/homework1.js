@@ -22,6 +22,7 @@ $("#stardiv").mouseleave(function () {
 });
 
 $("#stardiv img").click(function () {
+    if (IsClick) return;
     $(this).css("filter", "grayscale(0)").prevAll().css("filter", "grayscale(0)").end().nextAll().css("filter", "grayscale(1)");
     score = $(this).prop("id").substr(7);
     $("#scorediv").html(`你給<span> ${score} </span>顆星`);
