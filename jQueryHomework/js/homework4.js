@@ -44,12 +44,12 @@ function ShowCityDistrict() {
     let district = $("#article4 #district").val();
     let tdCity = $(`#article4 td[rowspan]:contains(${city})`);
     tdCity.css(cssObj);
-    let cityIndex = cities.indexOf(city);
-    let length = districts[cityIndex].length;
-
-    //$(`#article4 td:not(td[rowspan]):contains(${district})`).css(cssObj).siblings().css(cssObj);
-
-
-    //console.log($(`#article4 td[rowspan]:contains(${city})`));
-
+    if (tdCity.siblings().filter(`td:contains(${district})`).length == 1) {
+        tdCity.siblings().filter(`td:contains(${district})`).css(cssObj).siblings().css(cssObj);
+        console.log(tdCity.siblings().filter(`td:contains(${district})`));
+    } else {
+        let cityIndex = cities.indexOf(city);
+        let length = districts[cityIndex].length;
+        tdCity.closest("tr").nextAll().slice(0, length - 1).find(`td:contains(${district})`).css(cssObj).siblings().css(cssObj);
+    }
 }
